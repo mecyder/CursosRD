@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,15 +49,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categorias.cs" />
-    <Compile Include="Cursos.cs" />
-    <Compile Include="Detalle_Factura.cs" />
-    <Compile Include="Factura.cs" />
-    <Compile Include="Historial_Descargas.cs" />
-    <Compile Include="Ofertas.cs" />
+    <Compile Include="Categoria.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Curso.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CursosRDModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Historial_Descargar.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Oferta.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pais.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persona.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuarios.cs" />
-    <Compile Include="Usuario_Curso.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Roles_Usuarios.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios_Cursos.cs">
+      <DependentUpon>CursosRDModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CursosRDModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CursosRDModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{181b127f-d5cb-4425-8e7f-58a9e0ad8a6f}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

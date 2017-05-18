@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3b3ad543a8194ba9bdc6f0b4aaebb7aa" Name="Diagram1">
+        <EntityTypeShape EntityType="CursosRDModel.Categoria" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Curso" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Historial_Descargar" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Oferta" Width="1.5" PointX="7.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Pais" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Persona" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Role" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Roles_Usuarios" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.sysdiagram" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Usuario" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CursosRDModel.Usuarios_Cursos" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="CursosRDModel.FK_Cursos_Categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Historial_Descargar_Cursos" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Ofertas_Cursos" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Usuarios_Cursos_Cursos" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Historial_Descargar_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Personas_Paises" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Usuarios_Personas" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Roles_Usuarios_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Roles_Usuarios_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="CursosRDModel.FK_Usuarios_Cursos_Usuarios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
